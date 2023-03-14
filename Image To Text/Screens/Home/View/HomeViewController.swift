@@ -22,10 +22,39 @@ class HomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    // MARK: - Function
+    
+    private func recognizeText(image: UIImage?){
+        guard let cgImage = image?.cgImage else { return }
+        
+        // Handler
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        
+        // Request
+        let request = VNRecognizeTextRequest{ [weak self] request, error in
+            guard let observations = request.results as? [VNRecognizedTextObservation],
+                  error == nil else {
+                      return
+                  }
+            let text = observations.compactMap({
+                $0.topCandidates(1).first?.string
+            }).joined(separator: ", ")
+            self?.showTextLabel.text = text
+        }
+        
+        // Process request
+        do {
+            try handler.perform([request])
+        } catch let error {
+            showTextLabel.text = error.localizedDescription
+            print(error.localizedDescription)
+        }
+        
+    }
     
     // MARK: - IBAction
     @IBAction func getTextButtonAction(_ sender: UIButton) {
-        print("Get Text Button")
+        recognizeText(image: imageArray)
     }
     
     @IBAction func getPhotoButtonAction(_ sender: UIButton) {
