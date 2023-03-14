@@ -13,6 +13,7 @@
 		FA46A7F529C0455F008255BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46A7F429C0455F008255BF /* Assets.xcassets */; };
 		FA46A7F829C0455F008255BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46A7F629C0455F008255BF /* LaunchScreen.storyboard */; };
 		FA46A80529C046C8008255BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46A80429C046C8008255BF /* HomeViewController.swift */; };
+		FA46A80829C0484B008255BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46A80729C0484B008255BF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA46A7F729C0455F008255BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA46A7F929C0455F008255BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA46A80429C046C8008255BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA46A80729C0484B008255BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,11 @@
 		FA46A7EA29C0455E008255BF /* Image To Text */ = {
 			isa = PBXGroup;
 			children = (
+				FA46A80929C048CC008255BF /* Application */,
+				FA46A80629C0482C008255BF /* Constant */,
 				FA46A7FF29C04621008255BF /* Screens */,
-				FA46A7EB29C0455E008255BF /* AppDelegate.swift */,
-				FA46A7ED29C0455E008255BF /* SceneDelegate.swift */,
-				FA46A7F129C0455E008255BF /* Main.storyboard */,
-				FA46A7F429C0455F008255BF /* Assets.xcassets */,
-				FA46A7F629C0455F008255BF /* LaunchScreen.storyboard */,
+				FA46A80A29C04951008255BF /* Storyboard */,
+				FA46A80B29C04967008255BF /* Resources */,
 				FA46A7F929C0455F008255BF /* Info.plist */,
 			);
 			path = "Image To Text";
@@ -105,6 +106,40 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA46A80629C0482C008255BF /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A80729C0484B008255BF /* Constants.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		FA46A80929C048CC008255BF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A7EB29C0455E008255BF /* AppDelegate.swift */,
+				FA46A7ED29C0455E008255BF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FA46A80A29C04951008255BF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A7F129C0455E008255BF /* Main.storyboard */,
+				FA46A7F629C0455F008255BF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA46A80B29C04967008255BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A7F429C0455F008255BF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +216,7 @@
 				FA46A7EC29C0455E008255BF /* AppDelegate.swift in Sources */,
 				FA46A7EE29C0455E008255BF /* SceneDelegate.swift in Sources */,
 				FA46A80529C046C8008255BF /* HomeViewController.swift in Sources */,
+				FA46A80829C0484B008255BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
